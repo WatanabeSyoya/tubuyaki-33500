@@ -55,17 +55,13 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        $posts = Post::where('title', 'like', "%{$request->search}%")
-                ->orWhere('content', 'like', "%{$request->search}%")
-                ->paginate(3);
+        $post = new Post;
+        $input = $request->only($post->getFillable());
 
-        $search_result = $request->search.'の検索結果'.$posts->total().'件';
+        $post = $post->create($input);
 
-        return view('posts.index', [
-            'posts' => $posts,
-            'search_result' => $search_result,
-            'search_query'  => $request->search
-        ]);
+        return redirect('/');
+
     }
 
     /**
