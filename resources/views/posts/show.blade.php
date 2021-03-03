@@ -9,7 +9,7 @@
         </div>
     @endif
         <a href="{{ url('posts/' . $post->id . '/edit') }}" class="btn btn-primary">編集</a>
-        <form method="POST" action="{{ route('posts.destroy', ['id' => $post->id]) }}">
+        <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
             @csrf
             @method('DELETE')
             <button class="btn btn-danger" type="submit">削除</button>
