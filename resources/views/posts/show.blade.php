@@ -8,7 +8,7 @@
             {{ session('status') }}
         </div>
     @endif
-        <a href="{{ route('posts.edit', ['id' => $post->id ]) }}" class="btn btn-primary">編集</a>
+        <a href="{{ url('posts/' . $post->id . '/edit') }}" class="btn btn-primary">編集</a>
         <form method="POST" action="">
             @csrf
             @method('DELETE')
