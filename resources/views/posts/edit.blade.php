@@ -20,9 +20,9 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('posts.update, $post->id ')}}" method="PUT" enctype="multipart/form-data">
+            <form action="{{ route('posts.update, $post->id ')}}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
-
+                @method('PUT')
               <div class="form-group">
                 <label for="exampleInputEmail1">title</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="title" name="title">

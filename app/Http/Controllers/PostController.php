@@ -85,9 +85,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $request)
     {
-        $post = Post::find($id);
+        $post = Post::find($request -> id);
 
         return view('posts.edit', compact('post'));
     }
