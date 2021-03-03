@@ -102,9 +102,12 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post = Post::find($id);
-        $input = $request->only($post->getFillable());
 
-        $post = $post->create($input);
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+        $post->category->id = $request->input('id');
+
+        $post->save();
 
         return redirect('/');
     }
