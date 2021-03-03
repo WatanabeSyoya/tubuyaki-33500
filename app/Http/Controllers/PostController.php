@@ -99,9 +99,14 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
-        //
+        $post = Todo::find($id);
+        $input = $request->only($post->getFillable());
+
+        $post = $post->create($input);
+
+        return redirect('/');
     }
 
     /**
