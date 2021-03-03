@@ -8,7 +8,12 @@
             {{ session('status') }}
         </div>
     @endif
-
+        <a href="" class="btn btn-primary">編集</a>
+        <form method="POST" action="">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger" type="submit">削除</button>
+        </form>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">{{ $post->title }}</h5>
