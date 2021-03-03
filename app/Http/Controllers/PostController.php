@@ -101,7 +101,7 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, $id)
     {
-        $post = Todo::find($id);
+        $post = Post::find($id);
         $input = $request->only($post->getFillable());
 
         $post = $post->create($input);
