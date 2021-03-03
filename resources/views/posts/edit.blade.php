@@ -27,22 +27,20 @@
                 <label for="exampleInputEmail1">title</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="title" name="title" value="{{ $post->title }}">
               </div>
-              {{ $post->title }}
-              {{ $post->title }}
 
                <div class="form-group">
                     <label for="exampleFormControlSelect1">category</label>
                     <select class="form-control" id="exampleFormControlSelect1" name="category_id" >
                         <option selected="">選択する</option>
-                        <option value="1" @if( $post->category->category_id == 1 ) selected @endif >book</option>
-                        <option value="2" @if( $post->category->category_id == 2 ) selected @endif >cafe</option>
-                        <option value="3" @if( $post->category->category_id == 3 ) selected @endif >travel</option>
+                        <option value="1" @if( $post->category->id == 1 ) selected @endif >book</option>
+                        <option value="2" @if( $post->category->id == 2 ) selected @endif >cafe</option>
+                        <option value="3" @if( $post->category->id == 3 ) selected @endif >travel</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                   <label for="comment">Comment:</label>
-                  <textarea class="form-control" rows="5" id="comment" name="content" >{{ $post->comment }}</textarea>
+                  <textarea class="form-control" rows="5" id="comment" name="content" >{{ $post->content }}</textarea>
                 </div>
 
               <button type="submit" class="btn btn-primary">更新する</button>
