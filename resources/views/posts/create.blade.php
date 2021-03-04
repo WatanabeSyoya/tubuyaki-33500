@@ -33,9 +33,9 @@
                     <label for="exampleFormControlSelect1">category</label>
                     <select class="form-control" id="exampleFormControlSelect1" name="category_id">
                         <option selected="">選択する</option>
-                        <option value="1">life</option>
-                        <option value="2">meal</option>
-                        <option value="3">hobby</option>
+                        <option value="1">book</option>
+                        <option value="2">cafe</option>
+                        <option value="3">travel</option>
                     </select>
                 </div>
 

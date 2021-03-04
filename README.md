@@ -10,8 +10,8 @@ http://tubuyaki-33500.herokuapp.com/
 
 
 ## テスト用アカウント
-* email: s@s
-* pw: 111111a
+* email: syoya@g.com
+* pw: 11111111
 
 
 ## 機能
