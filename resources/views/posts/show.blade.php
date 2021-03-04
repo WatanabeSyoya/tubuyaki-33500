@@ -8,12 +8,14 @@
             {{ session('status') }}
         </div>
     @endif
+      @if( Auth::check() )
         <a href="{{ url('posts/' . $post->id . '/edit') }}" class="btn btn-primary">編集</a>
         <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
             @csrf
             @method('DELETE')
             <button class="btn btn-danger" type="submit">削除</button>
         </form>
+      @endif
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">{{ $post->title }}</h5>
