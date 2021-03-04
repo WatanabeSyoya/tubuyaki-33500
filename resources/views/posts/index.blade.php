@@ -11,7 +11,7 @@
     </form>
 </div>
 
-<div class="card-header">Dashboard</div>
+<div class="card-header">今の気持ちをつぶやいて下さい</div>
 
 @isset($search_result)
     <h5 class="card-title">{{ $search_result }}</h5>
@@ -27,7 +27,7 @@
     @foreach($posts as $post)
     <div class="card">
         <div class="card-body">
-        <h5 class="card-title">{{ $post->title }}</h5>
+        <h5 class="card-title">タイトル:{{ $post->title }}</h5>
         <h5 class="card-title">
             カテゴリー:
             <a href="{{ route('posts.index', ['category_id' => $post->category_id]) }}">
@@ -39,8 +39,7 @@
             <a href="{{ route('users.show', $post->user_id) }}">
             {{ $post->user->name }}
             </a> 
-        </h5>
-        <p class="card-text">{{ $post->content}}</p>   
+        </h5>   
         <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary">詳細</a>
         </div>
     </div>
