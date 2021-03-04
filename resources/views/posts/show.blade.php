@@ -15,8 +15,6 @@
             @method('DELETE')
             <button class="btn btn-danger" type="submit">削除</button>
         </form>
-        {{ Auth::id() }}
-        {{ $post->user->id }}
       @endif
       
         <div class="card">

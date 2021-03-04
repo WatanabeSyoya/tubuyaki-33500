@@ -32,9 +32,9 @@
                     <label for="exampleFormControlSelect1">category</label>
                     <select class="form-control" id="exampleFormControlSelect1" name="category_id" >
                         <option selected="">選択する</option>
-                        <option value="1" @if( $post->category->id == 1 ) selected @endif >book</option>
-                        <option value="2" @if( $post->category->id == 2 ) selected @endif >cafe</option>
-                        <option value="3" @if( $post->category->id == 3 ) selected @endif >travel</option>
+                        <option value="1" @if( $post->category->id == 1 ) selected @endif >life</option>
+                        <option value="2" @if( $post->category->id == 2 ) selected @endif >meal</option>
+                        <option value="3" @if( $post->category->id == 3 ) selected @endif >hobby</option>
                     </select>
                 </div>
 
