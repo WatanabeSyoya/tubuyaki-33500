@@ -21,7 +21,7 @@ http://tubuyaki-33500.herokuapp.com/
 
 
 ## 使用技術
-- フレームワーク：6.20.16
+- フレームワーク：Laravel 6.20.16
 - フロント：HTML、CSS(bootstrap)
 - サーバーサイド言語：PHP 7.3.24
 - データベース：MySQL
