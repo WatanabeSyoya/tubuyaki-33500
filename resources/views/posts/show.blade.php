@@ -8,7 +8,7 @@
             {{ session('status') }}
         </div>
     @endif
-      @if( Auth::check() )
+      @if( Auth::check() && Auth::id() === $post.id )
         <a href="{{ url('posts/' . $post->id . '/edit') }}" class="btn btn-primary">編集</a>
         <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
             @csrf
