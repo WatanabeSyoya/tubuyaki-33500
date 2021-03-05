@@ -87,6 +87,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+        $this->middleware('auth');
         $post = Post::find($id);
 
         return view('posts.edit', compact('post'));
