@@ -89,7 +89,7 @@ class PostController extends Controller
     {
         
         $post = Post::find($id);
-        $this->middleware('auth');
+
         return view('posts.edit', compact('post'));
     }
 

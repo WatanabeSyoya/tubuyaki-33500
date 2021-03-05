@@ -18,9 +18,11 @@
 Auth::routes();
 
 Route::get('/', 'PostController@index')->name('posts.index');
-Route::get('/posts/search', 'PostController@search')->name('posts.search');
 
-Route::resource('/posts', 'PostController',  ['except' => ['index']]);
+Route::get('/posts/search', 'PostController@search')->name('posts.search');
+Route::get('edit/{id}', 'PostController@edit')->name('posts.edit')->middleware('auth');
+
+Route::resource('/posts', 'PostController',  ['except' => ['index','edit']]);
 Route::resource('/users', 'UserController');
 Route::resource('/comments', 'CommentController')->middleware('auth');
 
