@@ -87,10 +87,15 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        
-        $post = Post::find($id);
+        if( Auth::id() !== $post->user->id ){
+            return redirect('/');
 
-        return view('posts.edit', compact('post'));
+        } else {
+            $post = Post::find($id);
+
+            return view('posts.edit', compact('post'));
+        }
+
     }
 
     /**
